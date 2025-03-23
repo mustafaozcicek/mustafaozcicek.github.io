@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative Positioning</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        main {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .product-card {
+
+            border: 1px solid gray;
+            padding: 20px;
+            width: 350px;
+            position: relative;
+        }
+
+        .button {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: max-content;
+            background-color: darkgray;
+            font-size: 1.5rem;
+            padding: 10px 30px;
+        }
+
+        p {
+
+            font-size: 1.2rem;
+        }
+
+        h1 {
+
+            background-color: cornflowerblue;
+            margin-top: 0;
+            display: inline-block;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 0 36px 36px 0;
+            position: relative;
+            left: -20px;
+            
+        }
+
+        .favorite {
+
+            font-size: 2rem;
+            font-family: sans-serif;
+            position: absolute;
+            top: -15px;
+            right: 10px;
+        }
+
+        nav {
+
+            display: flex;
+            flex-direction: row;
+            background-color: black;
+            padding: 10px 0;
+            justify-content: center;
+            
+        }
+
+        header {
+
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100vw;
+            z-index: 1;
+
+        }
+
+        .nav-button {
+
+            width: max-content;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            font-family: sans-serif;
+            font-size: 2rem;
+        }
+
+        .nav-button:hover {
+
+            background-color: lightgray;
+            color: black;
+        }
+
+        .page-title {
+
+            margin-top: 150px;
+            font-size: 70px;
+            background-color: lightgray;
+            display: inline-block;
+            padding: 20px;
+
+        }
+
+        .sticky {
+
+            position: sticky;
+            top: 90px;
+            left: 20px;
+            z-index: 999;
+
+
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-button">Products</div>
+            <div class="nav-button">Return Info</div>
+            <div class="nav-button">Contact</div>
+            <div class="nav-button">About</div>
+        </nav>
+        
+    </header>
+
+    <div class="page-title sticky">Featured Products</div>
+
+    <main>
+
+        <section class="product-card">
+            <h1>iPhone 16</h1>
+            <p>It is a good product.</p>
+            <div class="button">Buy Now</div>
+            <p class="favorite">&#x2665;</p>
+        </section>
+
+        <section class="product-card">
+            <h1>iPhone 15</h1>
+            <p>It is a good product.</p>
+            <div class="button">Buy Now</div>
+            <p class="favorite">&#x2665;</p>
+        </section>
+
+
+        <section class="product-card">
+            <h1>iPhone 14</h1>
+            <p>It is a good product.</p>
+            <div class="button">Buy Now</div>
+            <p class="favorite">&#x2665;</p>
+        </section>
+
+        <section class="product-card">
+            <h1>iPhone 13</h1>
+            <p>It is a good product.</p>
+            <div class="button">Buy Now</div>
+            <p class="favorite">&#x2665;</p>
+        </section>
+
+        <section class="product-card">
+            <h1>iPhone 14</h1>
+            <p>It is a good product.</p>
+            <div class="button">Buy Now</div>
+            <p class="favorite">&#x2665;</p>
+        </section>
+
+        <section class="product-card">
+            <h1>iPhone 13</h1>
+            <p>It is a good product.</p>
+            <div class="button">Buy Now</div>
+            <p class="favorite">&#x2665;</p>
+        </section>
+
+        <section class="product-card">
+            <h1>iPhone 14</h1>
+            <p>It is a good product.</p>
+            <div class="button">Buy Now</div>
+            <p class="favorite">&#x2665;</p>
+        </section>
+
+        <section class="product-card">
+            <h1>iPhone 13</h1>
+            <p>It is a good product.</p>
+            <div class="button">Buy Now</div>
+            <p class="favorite">&#x2665;</p>
+        </section>
+
+        <section class="product-card">
+            <h1>iPhone 14</h1>
+            <p>It is a good product.</p>
+            <div class="button">Buy Now</div>
+            <p class="favorite">&#x2665;</p>
+        </section>
+
+        <section class="product-card">
+            <h1>iPhone 13</h1>
+            <p>It is a good product.</p>
+            <div class="button">Buy Now</div>
+            <p class="favorite">&#x2665;</p>
+        </section>
+
+        <section class="product-card">
+            <h1>iPhone 14</h1>
+            <p>It is a good product.</p>
+            <div class="button">Buy Now</div>
+            <p class="favorite">&#x2665;</p>
+        </section>
+
+        <section class="product-card">
+            <h1>iPhone 13</h1>
+            <p>It is a good product.</p>
+            <div class="button">Buy Now</div>
+            <p class="favorite">&#x2665;</p>
+        </section>
+
+        <section class="product-card">
+            <h1>iPhone 14</h1>
+            <p>It is a good product.</p>
+            <div class="button">Buy Now</div>
+            <p class="favorite">&#x2665;</p>
+        </section>
+
+        <section class="product-card">
+            <h1>iPhone 13</h1>
+            <p>It is a good product.</p>
+            <div class="button">Buy Now</div>
+            <p class="favorite">&#x2665;</p>
+        </section>
+
+
+    </main>
+
+
+    
+</body>
+</html>
