@@ -1,0 +1,79 @@
+/* * {
+
+    outline: 1px solid magenta;
+} */
+
+#maincontainer {
+
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+#chessboard {
+
+    width: 90vw;
+    aspect-ratio: 1 / 1;
+    max-width: 90vh;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    background-color: aquamarine;
+
+
+}
+
+#chessboard > div {
+
+    height: 12.5%;
+    display: flex;
+    flex-direction: row;
+    outline: 3px solid salmon;
+    
+}
+
+
+#chessboard div div {
+
+    
+    background-color: rgb(225, 226, 166);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30pt;
+    color: rgb(89, 42, 7);
+    flex-grow: 1;
+    width: 12.5%;
+    
+}
+
+#chessboard div:nth-of-type(even) div:nth-of-type(even) {
+
+    background-color: rgb(164, 112, 52);
+}
+
+#chessboard div:nth-of-type(odd) div:nth-of-type(odd) {
+
+    background-color: rgb(164, 112, 52);
+}
+
+#chessboard div:nth-of-type(2) div:nth-of-type(3) {
+
+    background-color: rgb(59, 36, 8);
+}
+
+#chessboard div:nth-of-type(2) div:nth-child(5) {
+
+    background-color: rgb(59, 36, 8);
+}
+
+#chessboard div:nth-of-type(2) div:last-child {
+
+    background-color: rgb(59, 36, 8);
+}
+
