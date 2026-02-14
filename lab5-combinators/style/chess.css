@@ -1,79 +1,101 @@
-/* * {
+:root {
 
-    outline: 1px solid magenta;
-} */
-
-#maincontainer {
-
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    /* clamp used here is a fairly new function */
+    /* first value is minimum font-size, second value is based on the viewport width, third value maximum font-size */
+    font-size: clamp(10pt, 5vw, 30pt);
+    font-family: sans-serif;
+    color: rgb(89, 42, 7);
 
 }
 
+#maincontainer, #chessboard, #chessboard > div:nth-of-type(1), #chessboard > div:nth-of-type(1) > div , #chessboard > div:nth-of-type(2), #chessboard > div:nth-of-type(2) > div, #play-area, #play-area > div, #play-area > div > div {
+
+    display: flex;
+}
+
+#maincontainer, #chessboard > div:nth-of-type(1) > div, #chessboard > div:nth-of-type(2) > div, #play-area > div > div {
+
+    justify-content: center;
+    align-items: center;
+}
+
+#chessboard > div:nth-of-type(1) > div, #chessboard > div:nth-of-type(2) > div, #play-area > div {
+
+    flex-grow: 1;
+}
+
+body {
+
+    margin: 0;
+}
+
+#maincontainer {
+
+    background-color: antiquewhite;
+
+    width: 100vw;
+    height: 100vh;
+}
 
 #chessboard {
 
+    flex-wrap: wrap;
     width: 90vw;
     aspect-ratio: 1 / 1;
     max-width: 90vh;
     max-height: 90vh;
-    display: flex;
-    flex-direction: column;
-    background-color: aquamarine;
-
-
+    background-color: rgb(226, 210, 166);
+    outline: 4px solid rgb(164, 112, 52);
 }
 
-#chessboard > div {
+#chessboard > div:nth-of-type(1), #chessboard > div:nth-of-type(2) {
+
+    font-size: 0.4rem;
+} 
+
+#chessboard > div:nth-of-type(1) {
+
+    width: 100%;
+    height: 5%;
+}
+
+
+#chessboard > div:nth-of-type(1) > div:nth-of-type(1) {
+
+    flex-grow: 0.5;
+}
+
+#chessboard > div:nth-of-type(2) {
+
+    flex-direction: column;
+    width: 5%;
+    height: 95%;
+    
+}
+
+
+#play-area {
+    
+    flex-direction: column;
+    width: 95%;
+    height: 95%;
+}
+
+#play-area > div {
 
     height: 12.5%;
-    display: flex;
-    flex-direction: row;
-    outline: 3px solid salmon;
     
 }
 
 
-#chessboard div div {
+#play-area > div > div {
 
-    
-    background-color: rgb(225, 226, 166);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30pt;
-    color: rgb(89, 42, 7);
-    flex-grow: 1;
-    width: 12.5%;
-    
+    width: 12.5%;   
 }
 
-#chessboard div:nth-of-type(even) div:nth-of-type(even) {
+#play-area div:nth-of-type(even) div:nth-of-type(even), #play-area div:nth-of-type(odd) div:nth-of-type(odd), #chessboard > div:nth-of-type(1) > div:nth-of-type(odd), #chessboard > div:nth-of-type(2) > div:nth-of-type(even) {
 
     background-color: rgb(164, 112, 52);
 }
 
-#chessboard div:nth-of-type(odd) div:nth-of-type(odd) {
-
-    background-color: rgb(164, 112, 52);
-}
-
-#chessboard div:nth-of-type(2) div:nth-of-type(3) {
-
-    background-color: rgb(59, 36, 8);
-}
-
-#chessboard div:nth-of-type(2) div:nth-child(5) {
-
-    background-color: rgb(59, 36, 8);
-}
-
-#chessboard div:nth-of-type(2) div:last-child {
-
-    background-color: rgb(59, 36, 8);
-}
 
