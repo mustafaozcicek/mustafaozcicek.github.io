@@ -1,0 +1,52 @@
+* {
+
+    outline: 1px solid;
+}
+
+body {
+
+    margin: 0;
+}
+
+.maincontainer {
+
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.maincontainer > div {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background-image: url("../../MEDIA/lolipops.png");
+    
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+
+
+
+}
+
+ img {
+
+    width: 50%;
+    aspect-ratio: 1 / 1;
+    align-self: center;
+    
+    
+
+}
