@@ -1,0 +1,150 @@
+:root {
+
+    font-size: clamp(18pt, 2vw, 24pt);
+    font-family: sans-serif;
+}
+
+body {
+
+    background-color: aquamarine;
+}
+
+
+h1 {
+
+    text-align: center;
+    color: rgb(143, 57, 184);
+}
+
+.sm {
+
+    display: contents;
+}
+
+.med {
+
+    display: none;
+}
+
+.lg {
+
+    display: none;
+}
+
+.xl {
+
+    display: none;
+}
+
+#card-container {
+
+    background-color: rgb(121, 121, 170);
+    padding: 20px;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    gap: 10px;
+    margin-top: 20px;
+
+}
+
+#card-container div {
+
+    padding: 20px;
+    height: 100px;
+    background-color: aliceblue;
+    background: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    box-shadow: 6px 6px 10px -9px #000000;
+    color: white;
+
+}
+
+/* Styles for iPad */
+@media screen and  (min-width: 768px){
+
+    .sm {
+
+        display: none;
+    }
+
+    .med {
+
+        display: contents;
+    }
+
+    body {
+
+    background-color: rgb(189, 255, 127);
+    }
+
+    #card-container {
+
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 0;
+
+    }
+
+    #card-container div {
+
+        height: 200px;
+    }
+
+    
+}
+
+
+/* Styles for Laptop */
+
+@media screen and (min-width: 992px) {
+
+
+    h1 {
+
+        text-align: left;
+    }
+
+    .med {
+
+        display: none;
+    }
+
+    .lg {
+
+        display: contents;
+    }
+
+    body {
+
+    background-color: rgb(255, 227, 127);
+}
+
+
+}
+
+/* Styles for XL Displays */
+
+@media screen and (min-width: 1200px) {
+
+    .lg {
+
+        display: none;
+    }
+
+    .xl {
+
+        display: contents;
+    }
+
+    body {
+
+    background-color: rgb(255, 153, 127);
+}
+    
+}
