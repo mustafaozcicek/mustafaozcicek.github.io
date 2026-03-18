@@ -1,0 +1,141 @@
+:root {
+    
+    font-size: 24px;
+}
+
+#grid-container {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+#grid-container img:nth-of-type(1) {
+
+    grid-column: 1 / span 2;
+
+    
+}
+
+main {
+
+    min-height: 100vh;
+
+    display: grid;
+    grid:   "header header header header"
+            "menu menu menu menu"
+            "page page page page"
+            "side side side side"
+            "footer footer footer footer";
+
+    grid-template-rows: auto 80px 60vh auto auto;
+
+
+
+}
+
+header {
+
+    grid-area: header;
+    font-size: 3rem;
+}
+
+nav {
+
+    grid-area: menu;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+article {
+
+    grid-area: page;
+}
+
+footer {
+
+    grid-area: footer;
+}
+
+aside {
+
+    grid-area: side;
+}
+
+header, nav, article, footer, aside {
+
+    border: 5px solid black;
+    padding: 0.7rem;
+}
+
+#brickcontainer {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr 2fr );
+    grid-template-rows: auto;
+}
+
+#brickcontainer div {
+
+    border: 3px solid blueviolet;
+}
+
+/* #brickcontainer div:nth-child(1) {
+
+    grid-row: 1 / span 4;
+    grid-column: 1 / span 4;
+}
+
+#brickcontainer div:nth-child(4) {
+
+    grid-row: 2 / span 5;
+} */
+
+
+/* ipad layout breakpoint */
+@media screen and (min-width: 768px) {
+
+
+    nav {
+
+            justify-content: flex-end;
+
+        }
+
+}
+
+
+/* desktop layout breakpoint */
+
+@media screen and (min-width: 992px) {
+
+
+    main {
+
+        grid:"header header header header header header"
+            "side menu menu menu menu menu"
+            "side page page page page page"
+            "footer footer footer footer footer footer";
+        
+        grid-template-rows: auto 80px 60vh auto;
+    }
+
+
+}
+
+
+
+
+/* large desktop layout breakpoint */
+@media screen and (min-width: 1500px) {
+
+
+
+}
