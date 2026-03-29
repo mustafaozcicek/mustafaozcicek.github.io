@@ -6,23 +6,27 @@
 #grid-container {
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(6, 1fr);
     gap: 10px;
+}
+
+
+
+.featured {
+ 
+    grid-column: span 2;
+    grid-row: span 2;
+    
 }
 
 img {
     width: 100%;
     height: auto;
+    aspect-ratio: 2 / 3 ;
+    object-fit: cover;
 }
 
-#grid-container img:nth-of-type(1) {
-
-    grid-column: 1 / span 2;
-
-    
-}
-
-main {
+main#page-layout {
 
     min-height: 100vh;
 
@@ -75,11 +79,12 @@ header, nav, article, footer, aside {
     padding: 0.7rem;
 }
 
-#brickcontainer {
+main#brickcontainer {
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr 2fr );
-    grid-template-rows: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    
 }
 
 #brickcontainer div {
@@ -87,16 +92,17 @@ header, nav, article, footer, aside {
     border: 3px solid blueviolet;
 }
 
-/* #brickcontainer div:nth-child(1) {
+#brickcontainer div:nth-child(1) {
 
-    grid-row: 1 / span 4;
-    grid-column: 1 / span 4;
+    grid-row: 2 / span 4;
+    grid-column: 3 / span 2;
 }
 
-#brickcontainer div:nth-child(4) {
+#brickcontainer div:nth-child(2) {
 
-    grid-row: 2 / span 5;
-} */
+    grid-row: 4 / span 3;
+    grid-column: 1 / span 2;
+}
 
 
 /* ipad layout breakpoint */
@@ -117,7 +123,7 @@ header, nav, article, footer, aside {
 @media screen and (min-width: 992px) {
 
 
-    main {
+    main#page-layout {
 
         grid:"header header header header header header"
             "side menu menu menu menu menu"

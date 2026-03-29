@@ -1,0 +1,75 @@
+:root {
+
+    font-size: 18pt;
+}
+
+#grid-container {
+
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    background-color: rgb(0, 0, 0);
+    gap: 0.2rem;
+    padding: 0.5rem;
+    aspect-ratio: 1/1;
+    height: 90vh;
+    
+    
+
+}
+
+#grid-container div {
+
+    background-color: white;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+/* #grid-container div:nth-of-type(1) {
+
+    background-color: purple;
+} */
+
+/* #grid-container div:nth-of-type(18n+1),
+#grid-container div:nth-of-type(18n+3),
+#grid-container div:nth-of-type(18n+5),
+#grid-container div:nth-of-type(18n+7),
+#grid-container div:nth-of-type(18n+9),
+#grid-container div:nth-of-type(18n+11),
+#grid-container div:nth-of-type(18n+13),
+#grid-container div:nth-of-type(18n+15),
+#grid-container div:nth-of-type(18n+17),
+#grid-container div:nth-of-type(18n+19)
+
+{
+
+    background-color: black;
+} */
+
+#grid-container div:nth-of-type(odd) {
+
+    background-color: black;
+    color: white;
+}
+
+#grid-container div:hover {
+
+    background-color: rgb(198, 161, 195);
+}
+
+#grid-container div:nth-of-type(odd):hover {
+
+    background-color: rgb(196, 196, 29);;
+}
+
+/* #grid-container div:nth-of-type(10) {
+
+    grid-column: span 3;
+    grid-row: span 2;
+
+
+
+} */
