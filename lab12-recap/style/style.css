@@ -1,0 +1,148 @@
+* {
+
+    outline: 1px solid red;
+
+    box-sizing: border-box;
+
+    
+}
+
+
+:root {
+    
+    font-size: 18pt;
+    --primaryColor: rgb(127, 90, 154);
+    --secondaryColor: rgb(206, 169, 120);
+
+    --h1FontSize: 2rem;
+    --headingFF: "Roca";
+}
+
+
+.flexH {display: flex; flex-direction: row;}
+
+.flexV {display: flex; flex-direction: column;}
+
+.flex-h-center {justify-content: center;}
+
+.flex-v-center {align-items: center;}
+
+section#hero {
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+
+
+}
+
+.hero-text {
+
+    font-size: var(--h1FontSize);
+    color: var(--primaryColor);
+
+}
+
+img {
+
+    width: 100%;
+    height: auto;
+}
+
+section#poster {
+
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+
+#site-background {
+
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+
+
+div#carousel {
+
+    background-color: blueviolet;
+    overflow-x: hidden;
+    border-radius: 50%;
+    animation: propeller 40s linear infinite;
+    transform: translate(-200px) scale(200%);
+
+    filter: blur(50px);
+    position: absolute;
+    z-index: -1;
+}
+
+#carousel-wrapper {
+
+    display: flex;
+    flex-direction: row;
+
+    animation: carousel-move 4s linear infinite;
+    
+}
+
+#carousel-wrapper > div {
+
+    min-width: 400px;
+    min-height: 400px;
+}
+
+#carousel-wrapper > div:nth-of-type(odd) {
+
+    background-color: var(--primaryColor);
+
+}
+
+#carousel-wrapper > div:nth-of-type(even) {
+
+    background-color: var(--secondaryColor);
+}
+
+@keyframes carousel-move {
+
+    from {transform: translateX(0);}
+    to {transform: translateX(-800px);}
+    
+}
+
+@keyframes propeller {
+
+    from {transform: rotate(0);}
+    to {transform: rotate(360deg);}
+    
+}
+
+/* Styles for Mobile */
+
+@media screen and (min-width: 992px) {
+
+
+    section#poster {
+
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+
+}
+
+    section#poster > div {
+
+    grid-column: 2;
+    grid-row: 1;
+
+    }
+
+}
+    

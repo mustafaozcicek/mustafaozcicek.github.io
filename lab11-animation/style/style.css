@@ -1,0 +1,198 @@
+body
+{
+
+    animation-name: bodybg;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.circle-ease {
+
+    border: 1px solid #000000;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    transition: 0.3s ease-in-out;
+    animation-name: circleMove;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    
+}
+
+.circle-linear {
+
+    position: absolute;
+    top: 0px;
+    left: 400px;
+    border: 1px solid black;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    transition: 0.3s linear;
+    animation-name: yellowCircle;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-delay: 0.5s;
+
+}
+
+#menu {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border: 1px solid black;
+    font-size: 45pt;
+    font-family: sans-serif;
+    gap: 20px;
+    animation-name: borderColor;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-delay: 0.5s;
+
+    
+
+    
+}
+
+#menu a {
+
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    text-decoration: dotted;
+    padding: 10px;
+    transition: 0.4s ease-in-out;
+    animation-name: textColor;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    
+
+
+}
+
+#menu a:hover {
+
+    background-color: black;
+    color:white;
+    padding-right: 50px;
+}
+
+
+
+menu a {
+
+    width: max-content;
+}
+
+.purple {
+
+    background-color: rgb(0, 0, 0);
+}
+
+.yellow {
+
+    background-color: rgb(255, 255, 255);
+}
+
+.circle-ease:hover {
+
+    width: 300px;
+    height: 300px;
+    
+}
+
+.circle-linear:hover {
+
+    width: 300px;
+    height: 300px;
+    
+}
+
+@keyframes circleMove {
+
+    0% {
+
+        transform: translateY(80vh);
+        height: 200px;
+
+    }
+
+    100% {
+
+        transform: translateY(0px);
+        height: 200px;
+
+    }
+}
+
+@keyframes yellowCircle {
+
+    0% {
+
+        transform: translateY(80vh);
+        height: 200px;
+
+    }
+
+    100% {
+
+        transform: translateY(0px);
+        height: 200px;
+
+    }
+}
+
+
+@keyframes bodybg {
+
+    0% {
+
+        background-color: white;
+
+    }
+
+    100% {
+
+        background-color: rgb(0, 0, 0);
+
+    }
+}
+
+@keyframes textColor {
+
+    0% {
+
+        background-color: black;
+        border-color: black;
+        color: white;
+
+    }
+
+    100% {
+
+        background-color: white;
+        border-color: white;
+
+    }
+}
+
+@keyframes borderColor {
+
+    0% {
+
+        border-color: black;
+
+    }
+
+    100% {
+
+        border-color: white;
+
+    }
+}
