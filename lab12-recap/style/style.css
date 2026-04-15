@@ -21,17 +21,90 @@
     --containerPadding: 20px;
 
     --gridGap: 20px;
+
+    --headerHeight: 100px;
 }
+
+body {
+
+    margin: 0px;
+    margin-top: var(--headerHeight);
+}
+
+
+/* HEADER */
+
+
+header {
+
+    background-color: rgba(206, 169, 120, 0.8);
+
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+
+    align-items: center;
+
+    width: 100vw;
+
+    height: 100px;
+    position: fixed;
+    top: 0px;
+    padding: 0px var(--containerPadding);
+}
+
+nav {
+    
+    justify-self: right;
+    display: flex;
+    gap: 20px;
+}
+
+nav > a {
+
+    text-decoration: none;
+    color: var(--primaryColor);
+    font-size: 1.3rem;
+    padding: var(--cardPadding);
+}
+
+nav > a:hover {
+
+    background-color: var(--primaryColor);
+    color: white;
+}
+
+.brand {
+
+    font-size: 2.5rem;
+    color: var(--primaryColor);
+}
+
+nav > a:nth-of-type(1) {} 
+
+nav > a:nth-of-type(2), nav > a:nth-of-type(3), nav > a:nth-of-type(4), nav > a:nth-of-type(5) {display: none;}
+
+
+
+/* HEADER END */
+
+
+/* GLOBAL CONTAINERS */
+
+.grid3x1 {
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--gridGap);
+    padding: var(--containerPadding);
+}
+
 
 /* STUDENTS PAGE */
 
 #students {
 
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: var(--gridGap);
     background-color: violet;
-    padding: var(--containerPadding);
+    
 }
 
 #student-grid {
@@ -60,6 +133,18 @@
 /* Student Cards END */
 
 /* STUDENTS PAGE END */
+
+
+/* BIOS PAGE */
+
+section#bios {
+
+  
+    background-color: lightseagreen;
+
+}
+
+/* BIOS PAGE END */
 
 
 
@@ -147,6 +232,23 @@ div#carousel {
     background-color: var(--secondaryColor);
 }
 
+
+/* FOOTER */
+
+footer {
+    background-color: var(--secondaryColor);
+    height: 200px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+/* FOOTER END */
+
+
+/* ANIMATIONS */
+
 @keyframes carousel-move {
 
     from {transform: translateX(0);}
@@ -165,6 +267,12 @@ div#carousel {
 
 @media screen and (min-width: 768px) {
 
+    header {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+
     #student-grid {
 
     grid-template-columns: repeat(3, 1fr);
@@ -178,19 +286,29 @@ div#carousel {
 @media screen and (min-width: 992px) {
 
 
-    section#poster {
+    .grid3x1 {
 
-    display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
-
+    grid-template-columns: repeat(1, 1fr 4fr 1fr);
 }
 
-    section#poster > div {
+.grid3x1 > * {
 
     grid-column: 2;
     grid-row: 1;
+}
 
-    }
+
+
+    
+
+
+    nav > a:nth-of-type(1) {display: none;} 
+
+    nav > a:nth-of-type(2), nav > a:nth-of-type(3), nav > a:nth-of-type(4), nav > a:nth-of-type(5) {display:unset;}
+
+
+
+
 
     #students {
 
@@ -202,6 +320,12 @@ div#carousel {
         grid-column: 2;
         grid-row: 1;
 
+    }
+
+    #students > h1 {
+
+        /* grid-column: 2 / 3;
+        grid-row: 1; */
     }
 
 
