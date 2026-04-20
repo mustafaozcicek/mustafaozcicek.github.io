@@ -7,10 +7,16 @@
     <link rel="stylesheet" href="style/style.css" />
   </head>
   <body>
+    <div id="overlay-menu" class="overlay-menu open">
+        <a href="#" onclick="closeOverlay()">CLOSE</a>
+        <a href="index.html">Home</a>
+        <a href="students.html">Students</a>
+        <a href="contact.html">Contact</a>
+    </div>
     <header>
-        <span class="brand"> Class of 2027</span>
+        <span class="brand"> <a href="index.html">Class of 2027</a></span>
         <nav>
-            <a href="#">☰</a>
+            <a href="#" onclick="openOverlay()">☰</a>
             <a href="index.html">Home</a>
             <a href="students.html">Students</a>
             <a href="contact.html">Contact</a>
@@ -104,5 +110,6 @@
 
         This is my footer, we will put some contact info here later.
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
