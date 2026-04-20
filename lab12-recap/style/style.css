@@ -32,6 +32,38 @@ body {
 }
 
 
+/* GLOBAL STYLES */
+
+.grid3x1 {
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--gridGap);
+    padding: var(--containerPadding);
+}
+
+
+.img-placeholder {
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 200px;
+    max-height: 600px;
+    overflow: hidden;
+    background-color: lightgray;
+}
+
+a {
+
+    text-decoration: none;
+    
+   
+}
+
+
+
+
 /* HEADER */
 
 
@@ -84,38 +116,52 @@ nav > a:nth-of-type(1) {}
 nav > a:nth-of-type(2), nav > a:nth-of-type(3), nav > a:nth-of-type(4), nav > a:nth-of-type(5) {display: none;}
 
 
+.overlay-menu {
+
+    background-color: brown;
+    width: 0vw;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.3rem;
+    color: white;
+    transition: ease-in-out 0.9s;
+    overflow: hidden;
+}
+
+#overlay-menu a {
+
+    color: white;
+    padding: var(--cardPadding);
+}
+
+#overlay-menu a:nth-of-type(1) {
+
+    position: absolute;
+    top: var(--containerPadding);
+    right: var(--containerPadding);
+
+
+}
+
+/* .open {
+
+    display: flex;
+} */
+
+
+
 
 /* HEADER END */
 
 
-/* GLOBAL STYLES */
-
-.grid3x1 {
-
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: var(--gridGap);
-    padding: var(--containerPadding);
-}
-
-
-.img-placeholder {
-
-    display: flex;
-    align-items: center;
-    width: 100%;
-    min-height: 200px;
-    max-height: 600px;
-    overflow: hidden;
-    background-color: lightgray;
-}
-
-a {
-
-    text-decoration: none;
-    
-   
-}
 
 
 /* STUDENTS PAGE */
@@ -128,7 +174,7 @@ a {
 }
 
 #students a {
-    
+
     color: unset;
 }
 

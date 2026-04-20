@@ -8,10 +8,17 @@
 </head>
 <body>
 
+    <div id="overlay-menu" class="overlay-menu open">
+        <a href="#" onclick="closeOverlay()">CLOSE</a>
+        <a href="index.html">Home</a>
+        <a href="students.html">Students</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
     <header>
         <span class="brand"> Class of 2027</span>
         <nav>
-            <a href="#">☰</a>
+            <a href="#" onclick="openOverlay()">☰</a>
             <a href="index.html">Home</a>
             <a href="students.html">Students</a>
             <a href="contact.html">Contact</a>
@@ -33,7 +40,9 @@
                 <img src="img/class-vertical.webp" alt="CMICH GD Class of 2027">
             </picture>
 
-            <h1>CMICH GD Class of 2027</h1>
+            <div class="grid3x1"><h1>CMICH GD Class of 2027</h1></div>
+
+            
 
 
 
@@ -78,6 +87,9 @@
 
 
         </div>
+
+
+       <script src="js/script.js"></script>
     
 </body>
 </html>
