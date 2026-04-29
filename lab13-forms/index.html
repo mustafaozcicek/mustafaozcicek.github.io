@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 13: Forms</title>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <form
+        action="https://www.form-to-email.com/api/s/eA2zHSd2O7_a"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <label for="fullName">Full Name:</label>
+        <input
+          type="text"
+          placeholder="Name and Surname"
+          id="fullName"
+          name="name"
+          required
+        />
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" />
+
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email Address"
+          required
+        />
+
+        <span>Are You in the US?</span>
+        <div>
+          <input type="radio" name="location" id="yes" value="Yes" checked />
+          <label for="yes">Yes</label>
+          <input type="radio" name="location" id="no" value="No" />
+          <label for="no">No</label>
+        </div>
+
+        <label for="message">Message:</label>
+
+        <textarea
+          name="message"
+          id="message"
+          cols="30"
+          rows="10"
+          placeholder="Your message here..."
+          required
+        ></textarea>
+        <select id="Occupation" name="Occupation">
+          <option value="student">Student</option>
+          <option value="business owner">Business Owner</option>
+          <option value="designer" selected>Designer</option>
+          <option value="something else">Something Else</option>
+        </select>
+        <div>
+          <input
+            type="checkbox"
+            name="consent"
+            id="consent"
+            value="yes"
+            required
+          />
+          <label for="consent"
+            >I consent to receive communications from you.</label
+          >
+        </div>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+:root {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16pt;
+}
+
+.main {
+
+
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 400px;
+    background-color: rgb(229, 208, 249);
+    padding: 1em;
+    font-size: 1rem;
+}
+
+input, textarea, button, select {
+
+    font-size: 1.2rem;
+}
